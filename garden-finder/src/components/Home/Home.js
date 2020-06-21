@@ -13,9 +13,9 @@ class Home extends Component {
                 <div id="landing-div" className="jumbotron bg-transparent rounded-0">
                     <h1 id="landing-title"> {this.state.title} </h1>
                     <div className="text-center">
-                    <button className="top-button btn-lg m-1 btn btn-success">Login</button>
-                    <button className="top-button btn-lg m-1 btn btn-success">Register</button>
-                    <button className="top-button btn-lg m-1 btn btn-success">Map</button>
+                        <button className="top-button btn-lg m-1 btn btn-success">Login</button>
+                        <button className="top-button btn-lg m-1 btn btn-success">Register</button>
+                        <Link to='/map'> <button className="top-button btn-lg m-1 btn btn-success">Map</button> </Link>
 
                     </div>
                 </div>

@@ -31,5 +31,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "An App to help people start and find local gardens in their area\" ",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GreatestDane/Garden_App.git"
+  },
+  "keywords": [
+    "Garden"
+  ],
+  "author": "Dane Michael Goodman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GreatestDane/Garden_App/issues"
+  },
+  "homepage": "https://github.com/GreatestDane/Garden_App#readme"
 }

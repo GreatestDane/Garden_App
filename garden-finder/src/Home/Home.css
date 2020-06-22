@@ -1,0 +1,31 @@
+body {
+    background-image:url("/images/green_background.js");
+    background-repeat:no-repeat
+}
+
+.landing-box {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#landing-title {
+    /* margin-top: 10vh; */
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 10vh;
+    color: #ff0141;
+    text-align: center;
+    text-shadow:
+    -1px -1px 0 #d3d3d3,
+    1px -1px 0 #d3d3d3, 
+    -1px 1px 0 #d3d3d3,
+    1px 1px 0 #d3d3d3;
+} 
+
+#landing-div {
+    height: 350px;
+    margin-top: 20vh;
+    background-image: url("/images/veggie_background.jpg");
+    /* background-image: url("https://cdn-images-1.medium.com/max/1600/1*DTkbYDqroiSzJ3k5c_x5Zg.jpeg") */
+    background-repeat: no-repeat;
+    background-size: cover;
+}

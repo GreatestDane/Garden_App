@@ -1,20 +1,19 @@
 import React from 'react';
-// import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from "../Home/Home.js";
-// import Map from '../elements/Map/Map.js';
+import Maps from '../components/Maps/Maps.js';
 
 function App() {
   return (
     <div>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <React.Fragment>
           <Switch>
             <Route path='/' component={ Home } exact />
-            <Route path='/map' component={ Map } exact />
+            <Route path='/map' component={ Maps } exact />
           </Switch>
         </React.Fragment>
-      </BrowserRouter> */}
-      <Home />
+      </BrowserRouter>
     </div>
   );
 }

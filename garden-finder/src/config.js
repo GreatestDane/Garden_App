@@ -1,0 +1,6 @@
+//declaring variables for the TOMTOM API here
+
+const BASE_URL = 'api.tomtom.com';
+const VERSION = '2';
+const EXT = "json";
+const API_KEY = 'yMgNw1TOfHuAowlpwEd0D23jwT5L9rCb';

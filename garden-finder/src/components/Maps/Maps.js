@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
 import './Maps.css';
 import Header from '../Header/Header.js';
+import { BASE_URL, VERSION, API_KEY } from '../../config.js';
 
 class Maps extends Component {
     state = {
         title: " YOU LIKE MAPS? WE GOT MAPS!"
     }
 
+    fetchItems = (endpoint) => {
+        let endpoint = `https://${BASE_URL}/search/${VERSION}/search/91942.${EXT}?key=${API_KEY}`
+        fetch(endpoint)
+        .then(result => result.json())
+        .then(result => {
+            console.log(result);
+        })
+        .catch(error => console.error("Error:", error))
+    }
+
     render() {
         return (
             <div>
                 <Header />
-                
+
                 <div className="flex-container">
                 {this.state.title}
                 <div className="map">
@@ -23,7 +34,7 @@ class Maps extends Component {
                     <input type="text" name="Zipcode" />
                     </label>
                 </form>
-                <button className="top-button btn-lg m-1 btn btn-success">Search</button>
+                <button className="top-button btn-lg m-1 btn btn-success" onclick={this.fetchItems()}>Search</button>
                 </div>
             </div>
 

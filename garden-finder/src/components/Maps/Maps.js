@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Maps.css';
+import Header from '../Header/Header.js';
 
 class Maps extends Component {
     state = {
@@ -9,6 +10,8 @@ class Maps extends Component {
     render() {
         return (
             <div>
+                <Header />
+                
                 <div className="flex-container">
                 {this.state.title}
                 <div className="map">

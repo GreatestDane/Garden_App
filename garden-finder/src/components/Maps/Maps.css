@@ -1,0 +1,14 @@
+div{
+    color: white;
+}
+
+.map {
+    height: 400px;
+    width: 350px;
+    border: solid 15px black;
+    padding: 150px 0px 0px 100px;
+}
+
+.flex-container {
+    margin: 100px 0px 0px 500px;
+}

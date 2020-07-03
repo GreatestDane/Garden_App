@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import './Maps.css';
 import Header from '../Header/Header.js';
-import { endpoint } from '../../config.js';
+import { BASE_URL, VERSION, EXT, API_KEY } from '../../config.js';
 
 class Maps extends Component {
     state = {
-        title: " YOU LIKE MAPS? WE GOT MAPS!"
-    }
+        title: " YOU LIKE MAPS? WE GOT MAPS!",
+        data: null,
+    };
 
-    fetchItems = (endpoint) => {
-        fetch(endpoint)
-        .then(result => result.json())
-        .then(result => {
-            console.log(result);
-        })
-        .catch(error => console.error("Error:", error))
-    }
+    componentDidMount() {
+        fetch(`https://${BASE_URL}/search/${VERSION}/search/91942.${EXT}?key=${API_KEY}`)
+          .then(response => response.json())
+          .then(data => {
+              console.log(data)
+           this.setState({ data });
+      }
+          )};
 
     render() {
         return (
@@ -33,7 +34,7 @@ class Maps extends Component {
                     <input type="text" name="Zipcode" />
                     </label>
                 </form>
-                <button className="top-button btn-lg m-1 btn btn-success" onClick={this.fetchItems()}>Search</button>
+                <button className="top-button btn-lg m-1 btn btn-success">Search</button>
                 </div>
             </div>
 

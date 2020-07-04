@@ -9,6 +9,7 @@ class Home extends Component {
 
     render() {
         return (
+
             <div className="landing-box container-fluid">
                 <div id="landing-div" className="jumbotron bg-transparent rounded-0">
                     <h1 id="landing-title"> {this.state.title} </h1>

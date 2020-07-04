@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Maps.css';
-import Header from '../Header/Header.js';
 import { BASE_URL, VERSION, EXT, API_KEY } from '../../config.js';
 
 class Maps extends Component {
@@ -53,8 +52,6 @@ class Maps extends Component {
     render() {
         return (
             <div>
-                <Header />
-
                 <div className="flex-container">
                     {this.state.title}
                     <div className="map">

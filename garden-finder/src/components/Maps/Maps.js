@@ -9,16 +9,17 @@ class Maps extends Component {
     };
 
 
-    renderMapData = () => {
-        const mapElements = this.state.mapData.map( (element, i) => {
-            return (
-                <div key={i} className='map-elements'>
-                    {element}
-                </div>
-            )
-        })
-            return mapElements;
-    }
+    // renderMapData = () => {
+    //     let mapElements = this.state.mapData
+    //     mapElements.map( (element, i) => {
+    //         return (
+    //             <div key={i} className='map-elements'>
+    //                 {element}
+    //             </div>
+    //         )
+    //     })
+    //         return mapElements;
+    // }
 
     handleClick = () => {
         fetch(`https://${BASE_URL}/search/${VERSION}/search/91942.${EXT}?key=${API_KEY}`)
@@ -65,11 +66,11 @@ class Maps extends Component {
                     </form>
                     <button className="top-button btn-lg m-1 btn btn-success" onClick={() => this.handleClick()}>Search</button>
                     <button className="top-button btn-lg m-1 btn btn-success" onClick={() => this.mapLog()}>Console Log</button>
-                    <button className="top-button btn-lg m-1 btn btn-success" onClick={() => this.renderMapData()}>display</button>
+                    {/* <button className="top-button btn-lg m-1 btn btn-success" onClick={() => this.renderMapData()}>display</button> */}
 
                 </div>
                 <div className='results'>
-                    {this.renderMapData()}
+                    {/* {this.state.mapData} */}
                 </div>
             </div>
 

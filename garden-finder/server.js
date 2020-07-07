@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     res.send('HELLO WORLD');
 });
 
-app.use("/api", userRouter);
+app.use("/api/users", userRouter);
 
 app.listen(PORT, () => {
     console.log(`App is running on port ${PORT}`);

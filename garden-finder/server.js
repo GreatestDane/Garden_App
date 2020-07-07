@@ -2,7 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const db = require("./public/data/db/index.js")
+const db = require("./public/data/db/index.js");
+const userRouter = require("./public/data/user-router.js");
 
 const app = express();
 
@@ -20,6 +21,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 app.get('/', (req, res) => {
     res.send('HELLO WORLD');
 });
+
+app.use("/api", userRouter);
 
 app.listen(PORT, () => {
     console.log(`App is running on port ${PORT}`);

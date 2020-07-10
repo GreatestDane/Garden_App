@@ -8,6 +8,16 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
+//Set up Mongoose connection
+mongoose.connect('mongodb://localhost/students', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+mongoose.connection.on('connected', () => {
+    console.log('Mongoose is connected!!!!');
+});
+
 //HTTP request logger
 app.use(morgan('tiny'));
 
